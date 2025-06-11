@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Homepage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #343a40;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #495057;
+    }
+    nav button {
+      background-color: #495057;
+      color: white;
+      padding: 1rem;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    nav button:hover {
+      background-color: #6c757d;
+    }
+    .content {
+      padding: 2rem;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Si Ma</h1>
+  </header>
+
+  <nav>
+    <button onclick="showPage('about')">About</button>
+    <button onclick="showPage('research')">Research & Publications</button>
+  </nav>
+
+  <div class="content">
+    <div id="about">
+      <h2>About Me</h2>
+      <p>Welcome! I'm Si, and I'm passionate about understanding how motivation shapes memory. I earned my bachelor's degree in Geographic Information Systems and later joined the Psychology M.A. program at NYU. I am currenly a graduate student in psychology department at Rutgers University and my advisor is Dr. Qiong Zhang.</p>
+      
+      <p>My research focuses on how reward influences memory, and I use tools like computational modeling and EEG to explore these questions. Outside the lab, I love playing video games and getting lost in a good book.</p>
+
+      <p>Contact me at: <a href="mailto:si.ma@rutgers.edu">si.ma@rutgers.edu</a></p>
+
+      <p>Find more information about the lab: <a href="https://sites.rutgers.edu/memory-optimization-lab/">memory-optimization-lab</a></p>
+    </div>
+
+    <div id="research" class="hidden">
+      <h2>Research & Publications</h2>
+      <h3>Publications</h3>
+      <p>Ma S., & Zhang, Q. (2025). A Metacognitive Model of Memory Encoding Modulated by Rewards. Proceedings of the 47th Annual Conference of the Cognitive Science Society. <a href="Metacognitve2025.pdf" target="_blank">[pdf]</a></p>
+
+      <p>Ma S., Popov, V., & Zhang, Q. (2024). A Neural Index Reflecting the Amount of Cognitive Resources Available during Memory Encoding: A Model-based Approach. Journal of Experimental Psychology: Learning, Memory, and Cognition. <a href="NI2024.pdf" target="_blank">[pdf]</a></p>
+      
+      <h3>Conference</h3>
+      <p>Talk presnetation accepted at CogSci 2025: A Metacognitive Model of Memory Encoding Modulated by Rewards</p>
+      <p>Talk presentation accepted at Virtual MathPsych/ICCM 2025: A Metacognitive Model of Memory Encoding Modulated by Rewards</p>
+      <p>Data blitz presentation accepted at Context and Episodic Memory Symposium (CEMS) 2023 </p>
+      <p>Talk presentation accepted at Virtual MathPsych/ICCM 2022: A neural index of resource availability: Unifying subsequent memory effect, primacy serial position effect, and word frequency effect</p>
+
+      <h3>Reward</h3>
+      <p>Student travel reward for CogSci, 2025</p>
+      <p>Fellowship for graduate students, Psychology Department, Rutgers University, 2022</p>
+    </div>
+  </div>
+
+  <script>
+    function showPage(page) {
+      document.getElementById('about').classList.add('hidden');
+      document.getElementById('research').classList.add('hidden');
+      document.getElementById(page).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
