@@ -97,6 +97,11 @@
       document.getElementById('research').classList.add('hidden');
       document.getElementById(page).classList.remove('hidden');
     }
+    
+    // Show research page by default on page load
+    window.addEventListener('DOMContentLoaded', function() {
+      showPage('research');
+    });
   </script>
 </body>
 </html>
